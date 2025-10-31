@@ -21,6 +21,7 @@ Este proyecto forma parte de mi entrenamiento en PHP5 y manejo de APIs.
 - ese token se compara en api.php con el que ingresa la persona y devuelve la respuesta del web service.
 - al html form que teniamos le agregamos el campo para que la persona ingrese el token.
 - comenzamos a utilizar POSTMAN 
+- como desafio controlamos expiracion del toke por 5 min.
 
 
 ## Autor

@@ -6,12 +6,14 @@
     }
 
     $token = generateToken(); //genera el token aleatorio
+    $fecha = time();
 
-    file_put_contents('token.json', json_encode(['token' => $token]));//genera un .json y guarda ahi el token generado
+    file_put_contents('token.json', json_encode(['token' => $token, 'fecha'=>$fecha]));//genera un .json y guarda ahi el token generado
 
     $response = [
         "status" => "ok",
         "token" => $token,
+        "fecha" =>$fecha,
         "message" => "Token generado correctamente."
     ];
 

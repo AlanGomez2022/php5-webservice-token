@@ -23,6 +23,11 @@ Este proyecto forma parte de mi entrenamiento en PHP5 y manejo de APIs.
 - comenzamos a utilizar POSTMAN 
 - como desafio controlamos expiracion del toke por 5 min.
 
+### Día 4 — Docker con PHP 5.6
+- Se creó un Dockerfile para levantar el proyecto en un contenedor.
+- Se generó la imagen `webservice-php5`.
+- El servicio corre correctamente en `http://localhost:8080`.
+
 
 ## Autor
 Alan (Lord Sith 👾)

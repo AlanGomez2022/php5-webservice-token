@@ -6,7 +6,7 @@
     function generateToken($length = 32) {
         return bin2hex(openssl_random_pseudo_bytes($length / 2));
     }
-    function correrAuth(){
+    
         $token = generateToken(); //genera el token aleatorio
         $fecha = time();
     
@@ -21,5 +21,5 @@
     
         echo json_encode($response);
 
-    }
+ 
 ?>

@@ -1,4 +1,6 @@
 <?php
+
+
 header ('Content-Type: application/json');
 
 $savedTokenData = json_decode(file_get_contents('token.json'), true);

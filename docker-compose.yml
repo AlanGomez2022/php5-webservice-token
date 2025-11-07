@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: webservice-php5
+    container_name: webservice-php5
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    restart: unless-stopped

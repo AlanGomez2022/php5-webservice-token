@@ -3,7 +3,7 @@
 
 header ('Content-Type: application/json');
 
-$savedTokenData = json_decode(file_get_contents('token.json'), true);
+$savedTokenData = json_decode(file_get_contents(__DIR__ . '/../../lib/token.json'), true);
 $savedToken = $savedTokenData['token'];
 $savedTime = $savedTokenData['fecha'];
 

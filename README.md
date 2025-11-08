@@ -28,6 +28,11 @@ Este proyecto forma parte de mi entrenamiento en PHP5 y manejo de APIs.
 - Se generó la imagen `webservice-php5`.
 - El servicio corre correctamente en `http://localhost:8080`.
 
+### Día 5 — Reestructuración del proyecto
+- Se organizaron las carpetas en `/api`, `/config`, `/lib`, `/public`.
+- Se modularizaron las funciones en `lib/token.php`.
+- Se ajustó el Dockerfile para reflejar la nueva estructura.
+
 
 ## Autor
 Alan (Lord Sith 👾)

@@ -1,11 +1,21 @@
-version: '3'
+version: "3"
+
 services:
   web:
-    build: .
-    image: webservice-php5
     container_name: webservice-php5
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: webservice-php5
     ports:
       - "8080:80"
     volumes:
       - ./:/var/www/html
+    environment:
+      - TZ=America/Argentina/Cordoba
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost/"]
+      interval: 10s
+      timeout: 3s
+      retries: 10

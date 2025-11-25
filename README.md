@@ -33,6 +33,30 @@ Este proyecto forma parte de mi entrenamiento en PHP5 y manejo de APIs.
 - Se modularizaron las funciones en `lib/token.php`.
 - Se ajustó el Dockerfile para reflejar la nueva estructura.
 
+## Día 6 — Incorporación de docker-compose 🚀
 
-## Autor
-Alan (Lord Sith 👾)
+Se agregó un archivo `docker-compose.yml` para administrar el proyecto completo de manera más simple.  
+A partir de ahora, **ya no se usa Docker Desktop para darle “Play” a la imagen**: todo se maneja con `docker compose`.
+
+### ✔ ¿Para qué sirve docker-compose?
+- Levanta el proyecto completo con un solo comando  
+- Usa el Dockerfile automáticamente  
+- Expone puertos  
+- Monta la carpeta local dentro del contenedor (hot reload)  
+- Permite administrar fácilmente contenedores, logs y reinicios  
+- Escala a múltiples servicios (MariaDB, phpMyAdmin, Redis, etc.)
+
+### 📌 Archivo `docker-compose.yml` utilizado
+
+```yaml
+version: '3'
+services:
+  web:
+    build: .
+    image: webservice-php5
+    container_name: webservice-php5
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    restart: unless-stopped
